@@ -50,8 +50,9 @@
   font-weight: bold;
   transition: background 0.3s ease;
 }
-.dashboard-card-footer a{
+.dashboard-card-footer a:hover{
   background: #256029;
+  text-decoration: none;
 }
 
 .dashboard-link {
