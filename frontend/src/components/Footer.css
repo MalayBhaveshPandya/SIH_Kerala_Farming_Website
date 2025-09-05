@@ -1,0 +1,134 @@
+.footer {
+  background-color: rgba(129, 175, 132, 0.85); /* semi-transparent green */
+  color: white;
+  padding: 20px 0;
+  margin-top: 30px;
+  backdrop-filter: blur(6px); /* adds glass-like effect */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+  font-size: 14px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Transparent ChatGPT-like input bar */
+.chat-input-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  background: rgba(46, 125, 50, 0.8); /* transparent green */
+  backdrop-filter: blur(8px); /* frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 8px 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chat-input-box input[type="text"] {
+  color: white;
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  padding: 8px;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.icon-btn:hover {
+  color: #fdd835;
+}
+
+.send-btn {
+  border: none;
+  background: #2e7d32;
+  color: white;
+  font-size: 18px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.send-btn:hover {
+  background: darkgreen;
+}
+
+.chat-btn,
+.voice-btn {
+  background-color: #2e7d32;
+}
+
+.timeline-wrapper {
+  padding-bottom: 120px;  
+}

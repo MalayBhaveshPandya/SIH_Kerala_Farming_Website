@@ -1,0 +1,78 @@
+.navbar {
+  background-color: rgba(129, 175, 132, 0.85); /* ✅ green but transparent */
+  backdrop-filter: blur(6px);               /* ✅ subtle glass effect */
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* soft border */
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-links li a:hover {
+  background: #fdd835;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Toggle button */
+.navbar-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(46, 125, 50, 0.95); /* ✅ slightly more solid for mobile */
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+  }
+
+  .navbar-links.active {
+    max-height: 300px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+.farmer img:hover {
+  background-color: #fdd835;
+  border-radius: 50%;
+  padding: 2px;
+}

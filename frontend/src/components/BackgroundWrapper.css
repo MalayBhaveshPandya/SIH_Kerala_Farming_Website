@@ -1,0 +1,24 @@
+/* BackgroundWrapper.css */
+.background-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-img {
+  position: fixed; /* stays in place while scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the screen without distortion */
+  z-index: -1; /* behind everything */
+}
+
+.background-content {
+  position: relative;
+  z-index: 1; /* make sure content is above background */
+  padding: 20px;
+}
+
