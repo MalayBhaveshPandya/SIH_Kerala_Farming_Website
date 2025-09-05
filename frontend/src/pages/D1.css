@@ -1,177 +1,209 @@
+/* Base Styles (existing) */
 .primary{
     display: inline-block;
-  margin-top: 8px;
-  padding: 8px 12px;
-  background: #2f5233;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #2f5233;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
-
 
 button:hover{
     background: #256029;
 }
 
 div.body {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  color: white;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 div.leftsection {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px;
-}
-
-div.section {
-  gap: 10px;
-  margin: 20px;
+    flex: 1 1 65%; /* flexible width with min 65% */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
 }
 
 div.rightsection {
-  width: 30%;
-  margin: 20px;
+    flex: 1 1 30%; /* flexible width with min 30% */
+    margin: 20px;
+}
 
+div.section {
+    gap: 10px;
+    margin: 20px;
 }
 
 div.card-section {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* cards wrap on small screens */
+    align-items: center;
 }
 
 div.card {
-  box-shadow: var(--color-stone-300) 0px 3px 3px;
-  border: 1px solid var(--color-stone-300);
-  border-radius: 8px;
-  display: inline-block;
-  padding: 8px;
+    box-shadow: var(--color-stone-300) 0px 3px 3px;
+    border: 1px solid var(--color-stone-300);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 8px;
+    flex: 1 1 200px; /* cards shrink and grow */
 }
 
-
-
 div.card-head {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding-bottom: 10px;
-  border-bottom: var(--color-stone-300) solid 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 10px;
+    border-bottom: var(--color-stone-300) solid 1px;
 }
 
 div.card-body {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 } 
 
-
-/* 🌾 Tasks Table Styled Like Land Cards */
+/* Tasks Table Styled Like Land Cards */
 .tasks-table {
-  margin: 20px 0;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-  border-radius: 16px;
-  padding: 20px;
-  border: 2px solid #4caf50;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  overflow-x: auto;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid #4caf50;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
 }
 
 .tasks-table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-  color: #333;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    color: #333;
 }
 
 .tasks-table th,
 .tasks-table td {
-  padding: 12px 15px;
-  text-align: left;
+    padding: 12px 15px;
+    text-align: left;
 }
 
 .tasks-table th {
-  background-color: #2e7d32;
-  color: white;
+    background-color: #2e7d32;
+    color: white;
 }
 
 .tasks-table tr {
-  transition: background 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .tasks-table tr:nth-child(even) {
-  background: rgba(76, 175, 80, 0.08);
+    background: rgba(76, 175, 80, 0.08);
 }
 
 .tasks-table tr:hover {
-  background: rgba(76, 175, 80, 0.2);
-  transform: scale(1.01);
+    background: rgba(76, 175, 80, 0.2);
+    transform: scale(1.01);
 }
 
 /* Progress bar styling */
 .tasks-table progress {
-  width: 100px;
-  height: 12px;
-  border-radius: 6px;
-  overflow: hidden;
+    width: 100px;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .tasks-table progress::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 6px;
+    background-color: #eee;
+    border-radius: 6px;
 }
 
 .tasks-table progress::-webkit-progress-value {
-  background-color: #4caf50;
-  border-radius: 6px;
+    background-color: #4caf50;
+    border-radius: 6px;
 }
 
 .tasks-table progress::-moz-progress-bar {
-  background-color: #4caf50;
-  border-radius: 6px;
+    background-color: #4caf50;
+    border-radius: 6px;
 }
 
-/* 🌿 Unified styled card for right section */
+/* Unified styled card for right section */
 .styled-card {
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 25px;
-  border: 2px solid #4caf50;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 2px solid #4caf50;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .styled-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
 }
 
 .styled-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .styled-card li {
-  margin: 10px 0;
-  font-size: 15px;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: color 0.3s ease;
+    margin: 10px 0;
+    font-size: 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
 }
 
 .styled-card li:hover {
-  color: #2e7d32;
+    color: #2e7d32;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    div.body {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    div.leftsection, div.rightsection {
+        flex: 1 1 100%;
+        margin: 10px;
+    }
+    div.card-section {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.card-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    div.card {
+        width: 100%;
+        padding: 12px;
+    }
+    .tasks-table th, .tasks-table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .styled-card {
+        padding: 15px;
+    }
 }

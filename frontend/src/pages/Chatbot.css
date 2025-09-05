@@ -1,29 +1,42 @@
-.Chatbot-chat{
-  background: white;
-  flex:wrap;
-  height:500px;
-  width: 500px;
+.chats {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center; /* vertical centering */
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* 🖼️ Chat Window */
+.Chatbot-chat {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
   border-radius: 25px;
-  margin-left: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* scroll if content grows */
 }
 
 /* ✅ Chat Input Box */
 .chat-input-box {
-  /* position: fixed; */
-  margin-left: 1000px;
-  margin-bottom: 160px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 500px;
   display: flex;
   align-items: center;
   padding: 12px 16px;
   background: #fff;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
-  z-index: 1000;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   gap: 10px;
 }
 
@@ -79,7 +92,7 @@
 /* 😀 Emoji Picker */
 .emoji-picker {
   position: absolute;
-  bottom: 60px;
+  bottom: 70px; /* just above input box */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -97,4 +110,21 @@
 
 .emoji-picker span:hover {
   transform: scale(1.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .Chatbot-chat {
+    height: 300px;
+  }
+
+  .chat-input-box {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .chat-btn, .send-btn {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
