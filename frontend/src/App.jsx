@@ -17,12 +17,11 @@ export default function App() {
 
         <main className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard2" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/chatbot" element={<Chatbot />} />
-            <Route path="/dashboard" element={<D1 />} />
+            <Route path="/" element={<D1 />} />
           </Routes>
         </main>
         <Footer />

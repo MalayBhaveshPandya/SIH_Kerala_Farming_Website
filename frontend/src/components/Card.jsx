@@ -26,7 +26,7 @@ function Card(props) {
             <p>{props.p2}</p>
           </div>
           <div className="dashboard-card-footer">
-            <Link to="/dashboard2" className="dashboard-link">
+            <Link to="/dashboard" className="dashboard-link">
               Show more
             </Link>
           </div>

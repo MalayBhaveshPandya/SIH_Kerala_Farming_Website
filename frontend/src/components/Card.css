@@ -37,9 +37,21 @@
   color: #333;
 }
 
-.dashboard-card-footer {
-  text-align: right;
-  margin-top: 10px;
+.dashboard-card-footer a {
+  /* text-align: right;
+  margin-top: 10px; */
+    display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #2f5233;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.dashboard-card-footer a{
+  background: #256029;
 }
 
 .dashboard-link {

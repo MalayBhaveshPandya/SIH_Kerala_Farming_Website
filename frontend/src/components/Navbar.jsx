@@ -26,11 +26,6 @@ export default function Navbar() {
       {/* Links */}
       <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>
-            Home
-          </Link>
-        </li>
-        <li>
           <Link to="/login" onClick={() => setIsOpen(false)}>
             Login
           </Link>
@@ -40,13 +35,8 @@ export default function Navbar() {
             Signup
           </Link>
         </li>
-        {/* <li>
-          <Link to="/dashboard" onClick={() => setIsOpen(false)}>
-            Dashboard
-          </Link>
-        </li> */}
         <li>
-          <Link to="/dashboard" onClick={() => setIsOpen(false)}>
+          <Link to="/" onClick={() => setIsOpen(false)}>
             Dashboard
           </Link>
         </li>
